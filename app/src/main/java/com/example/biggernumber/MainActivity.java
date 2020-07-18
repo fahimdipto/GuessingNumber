@@ -32,8 +32,12 @@ public class MainActivity extends AppCompatActivity {
 
         r1 = rand.nextInt(1000);
         r2 = rand.nextInt(1000);
+        while (r1== r2){
+            r2 = rand.nextInt(1000);
+        }
         Button b1 = findViewById(R.id.leftButton);
         Button b2 = findViewById(R.id.rightButton);
+
         b1.setText(Integer.toString(r1));
         b2.setText(Integer.toString(r2));
     }
